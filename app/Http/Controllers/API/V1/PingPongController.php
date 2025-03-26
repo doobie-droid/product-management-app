@@ -13,6 +13,7 @@ class PingPongController extends Controller
 {
     /**
      * Check Program Health
+     * @response 200 ["Pong"]
      */
     public function __invoke()
     {

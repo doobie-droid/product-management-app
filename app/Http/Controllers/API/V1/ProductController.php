@@ -8,12 +8,20 @@ use App\Http\Resources\ProductResource;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
+/**
+ * @group Product
+ * 
+ * Product Related Apis
+ */
 class ProductController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
+     * List all products
+     * 
+     * This endpoint returns a paginated list of all products
+     * 
+     * @apiResourceCollection App\Http\Resources\ProductResource
+     * @apiResourceModel App\Models\Product paginate=10
      */
     public function index()
     {
@@ -21,10 +29,12 @@ class ProductController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Create New Product
+     * 
+     * This endpoint creates a new product
      *
-     * @param  StoreProductRequest  $request
-     * @return \Illuminate\Http\Response
+     * @apiResource App\Http\Resources\ProductResource
+     * @apiResourceModel App\Models\Product
      */
     public function store(StoreProductRequest $request)
     {
@@ -33,10 +43,13 @@ class ProductController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Display Single Product
+     * 
+     * This endpoint displays a specific product
      *
-     * @param  App\Models\Product $product
-     * @return \Illuminate\Http\Response
+     * @apiResource App\Http\Resources\ProductResource
+     * @apiResourceModel App\Models\Product
+     * @response 404 {"message": "App\Models\Product not found"}
      */
     public function show(Product $product)
     {

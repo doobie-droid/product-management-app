@@ -164,16 +164,7 @@ fetch(url, {
             <blockquote>
             <p>Example response (200):</p>
         </blockquote>
-                <details class="annotation">
-            <summary style="cursor: pointer;">
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-x-ratelimit-limit: 60
-x-ratelimit-remaining: 59
-access-control-allow-origin: *
- </code></pre></details>         <pre>
+                <pre>
 
 <code class="language-json" style="max-height: 300px;">[
     &quot;Pong&quot;
@@ -299,20 +290,20 @@ fetch(url, {
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: [
         {
-            &quot;id&quot;: 204,
-            &quot;name&quot;: &quot;nesciunt&quot;,
-            &quot;category&quot;: &quot;inventore&quot;,
-            &quot;status&quot;: &quot;inactive&quot;,
-            &quot;created_at&quot;: &quot;2025-03-26T22:16:19.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-03-26T22:16:19.000000Z&quot;
+            &quot;id&quot;: 1,
+            &quot;name&quot;: &quot;Scribe Product&quot;,
+            &quot;category&quot;: &quot;electronics&quot;,
+            &quot;status&quot;: &quot;active&quot;,
+            &quot;created_at&quot;: &quot;2025-03-26T21:52:20.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-03-26T21:52:20.000000Z&quot;
         },
         {
-            &quot;id&quot;: 205,
-            &quot;name&quot;: &quot;eveniet&quot;,
-            &quot;category&quot;: &quot;rem&quot;,
-            &quot;status&quot;: &quot;inactive&quot;,
-            &quot;created_at&quot;: &quot;2025-03-26T22:16:19.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-03-26T22:16:19.000000Z&quot;
+            &quot;id&quot;: 1,
+            &quot;name&quot;: &quot;Scribe Product&quot;,
+            &quot;category&quot;: &quot;electronics&quot;,
+            &quot;status&quot;: &quot;active&quot;,
+            &quot;created_at&quot;: &quot;2025-03-26T21:52:20.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-03-26T21:52:20.000000Z&quot;
         }
     ],
     &quot;links&quot;: {
@@ -464,12 +455,12 @@ fetch(url, {
 
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: {
-        &quot;id&quot;: 206,
-        &quot;name&quot;: &quot;iste&quot;,
-        &quot;category&quot;: &quot;quibusdam&quot;,
-        &quot;status&quot;: &quot;inactive&quot;,
-        &quot;created_at&quot;: &quot;2025-03-26T22:16:19.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-03-26T22:16:19.000000Z&quot;
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot;Scribe Product&quot;,
+        &quot;category&quot;: &quot;electronics&quot;,
+        &quot;status&quot;: &quot;active&quot;,
+        &quot;created_at&quot;: &quot;2025-03-26T21:52:20.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-03-26T21:52:20.000000Z&quot;
     }
 }</code>
  </pre>
@@ -620,12 +611,12 @@ fetch(url, {
 
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: {
-        &quot;id&quot;: 207,
-        &quot;name&quot;: &quot;dolorum&quot;,
-        &quot;category&quot;: &quot;amet&quot;,
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot;Scribe Product&quot;,
+        &quot;category&quot;: &quot;electronics&quot;,
         &quot;status&quot;: &quot;active&quot;,
-        &quot;created_at&quot;: &quot;2025-03-26T22:16:19.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-03-26T22:16:19.000000Z&quot;
+        &quot;created_at&quot;: &quot;2025-03-26T21:52:20.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-03-26T21:52:20.000000Z&quot;
     }
 }</code>
  </pre>

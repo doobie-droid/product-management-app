@@ -6,7 +6,16 @@ use App\Enums\Status;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-
+/**
+ * App\Models\Product
+ *
+ * @property int $id
+ * @property string $name
+ * @property string $category
+ * @property int $status
+ * @property Carbon $updated_at
+ * @property Carbon $created_at
+ */
 class Product extends Model
 {
     use HasFactory;

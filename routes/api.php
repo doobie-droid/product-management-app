@@ -24,7 +24,3 @@ Route::prefix('v1')->name('v1.')->group(function () {
     });
     Route::get('ping', PingPongController::class)->name('ping');
 });
-
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});

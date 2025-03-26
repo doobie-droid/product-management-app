@@ -21,7 +21,7 @@ class ProductController extends Controller
      * This endpoint returns a paginated list of all products
      * 
      * @apiResourceCollection App\Http\Resources\ProductResource
-     * @apiResourceModel App\Models\Product paginate=10
+     * @apiResourceModel App\Models\Product states=scribe paginate=10
      */
     public function index()
     {
@@ -34,7 +34,7 @@ class ProductController extends Controller
      * This endpoint creates a new product
      *
      * @apiResource App\Http\Resources\ProductResource
-     * @apiResourceModel App\Models\Product
+     * @apiResourceModel App\Models\Product states=scribe
      */
     public function store(StoreProductRequest $request)
     {
@@ -48,7 +48,7 @@ class ProductController extends Controller
      * This endpoint displays a specific product
      *
      * @apiResource App\Http\Resources\ProductResource
-     * @apiResourceModel App\Models\Product
+     * @apiResourceModel App\Models\Product states=scribe
      * @response 404 {"message": "App\Models\Product not found"}
      */
     public function show(Product $product)

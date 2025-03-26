@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\API\V1\PingPongController;
 use App\Http\Controllers\API\V1\ProductController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -21,6 +22,7 @@ Route::prefix('v1')->name('v1.')->group(function () {
         Route::get('/{product}', [ProductController::class, 'show'])->name('show');
         Route::post('/', [ProductController::class, 'store'])->name('store');
     });
+    Route::get('ping', PingPongController::class)->name('ping');
 });
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {

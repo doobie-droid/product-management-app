@@ -4,13 +4,16 @@ namespace App\Http\Controllers\API\V1;
 
 use App\Http\Controllers\Controller;
 
+/**
+ * @group Health
+ * 
+ * Endpoints for checking health of api
+ */
 class PingPongController extends Controller
 {
     /**
-     * Handle the incoming request.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * Check Program Health
+     * @response 200 ["Pong"]
      */
     public function __invoke()
     {

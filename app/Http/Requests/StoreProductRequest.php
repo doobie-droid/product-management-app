@@ -6,6 +6,11 @@ use App\Enums\StatusEnum;
 use Illuminate\Foundation\Http\FormRequest;
 use Spatie\Enum\Laravel\Rules\EnumRule;
 
+/**
+ * @bodyParam name string required The name of the product Example: Monkey King Wukong
+ * @bodyParam category string required The category of the product Example: game
+ * @bodyParam status string required An integer representing status Enum: active,inactive
+ */
 class StoreProductRequest extends FormRequest
 {
     /**

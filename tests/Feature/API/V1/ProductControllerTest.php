@@ -40,6 +40,21 @@ class ProductControllerTest extends TestCase
     }
 
     /** @test */
+    public function it_returns_error_for_invalid_status(): void
+    {
+        $payload = [
+            "name" => $this->faker()->word(),
+            "category" => $this->faker()->word(),
+            "status" => 200
+        ];
+
+        $this->postJson(route("v1.products.store"), $payload)
+            ->assertStatus(Response::HTTP_UNPROCESSABLE_ENTITY);
+
+        $this->assertDatabaseMissing(app(Product::class)->getTable(), $payload);
+    }
+
+    /** @test */
     public function it_can_fetch_all_products(): void
     {
         Product::factory(10)->create();

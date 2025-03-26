@@ -8,7 +8,7 @@ use Spatie\Enum\Laravel\Enum;
  * @method static self INACTIVE()
  * @method static self ACTIVE()
  */
-final class Status extends Enum
+final class StatusEnum extends Enum
 {
     protected static function values(): array
     {

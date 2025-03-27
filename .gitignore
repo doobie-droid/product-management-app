@@ -19,3 +19,5 @@ yarn-error.log
 /.vscode
 # PHPUnit backup file
 phpunit.xml.bak
+# PHPUnit cache
+.phpunit.cache

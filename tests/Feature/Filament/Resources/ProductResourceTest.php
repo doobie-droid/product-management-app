@@ -1,18 +1,14 @@
 <?php
 
-namespace Tests\Feature\Filament\Resources;
+use App\Filament\Resources\ProductResource\Pages\ManageProducts;
+use App\Models\User;
+use function Pest\Livewire\livewire;
 
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Tests\TestCase;
+beforeEach(function () {
+    $this->user = User::factory()->create(['is_admin' => true]);
+    $this->actingAs($this->user);
+});
 
-class ProductResourceTest extends TestCase
-{
-    use RefreshDatabase;
-
-    /** @test */
-    public function template_test(): void
-    {
-        //TODO: update template test to test filament components upon migration to pestphp
-        $this->assertTrue(true);
-    }
-}
+it('can render page for managing products', function () {
+    livewire(ManageProducts::class)->assertSuccessful();
+});

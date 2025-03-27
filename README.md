@@ -1,6 +1,6 @@
 # Product Management App
 
-Submission for [Pay4me assessment][assessment-pdf], includes CRUD application via FilamentPHP, Testing with PestPHP and doc generation with Laravel Scribe
+Submission for Pay4me assessment, includes CRUD application via FilamentPHP, Testing with PestPHP and doc generation with Laravel Scribe
 <br><br>
 The app has been hosted https://pay4me.laravel.cloud <br>
 You can visit the admin panel [here][hosted-url-admin]
@@ -51,6 +51,20 @@ php artisan scribe:generate
 
 2. You can visit the documentation at [/docs][documentation-link]
 
+### TESTING
+
+1. After setting up, you can run the tests by running:
+
+```
+php artisan test
+```
+
+2. To see code coverage for the tests, install [xdebug][xdebug-url] and then run
+
+```
+php artisan test --coverage
+```
+
 ### configuration
 
 Please modify these values in the `.env` file.
@@ -63,6 +77,6 @@ Please modify these values in the `.env.testing` file.
 -   DB_DATABASE=product_db_testing
 -   DB_PASSWORD=**\*\*\*\*** (Put your password here, leave blank if your mysql root uses no password)
 
+[xdebug-url]: https://xdebug.org/docs/install
 [hosted-url-admin]: https://pay4me.laravel.cloud/admin
-[assessment-pdf]: https://drive.google.com/file/d/1QFlo-qChZIKDgiaAQ26wGFVHOBBcj7G4/view?usp=sharing
-[documentation-link]: https://product-management-app-main-irm4rf.laravel.cloud/docs
+[documentation-link]: https://pay4me.laravel.cloud/docs

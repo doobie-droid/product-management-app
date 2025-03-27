@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Feature;
+namespace Tests\Feature\Http\Controllers\API\V1;
 
 use App\Enums\StatusEnum;
 use App\Models\Product;

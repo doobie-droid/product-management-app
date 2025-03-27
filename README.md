@@ -35,10 +35,10 @@ composer install
 php artisan key:generate
 ```
 
-5. Perform migrations and seed database
+5. Perform migrations and seed database and migrate db for testing database
 
 ```
-php artisan migrate:seed
+php artisan migrate --seed && php artisan migrate  --env=testing
 ```
 
 ### DOCUMENTATION
@@ -56,12 +56,12 @@ php artisan scribe:generate
 Please modify these values in the `.env` file.
 
 -   DB_DATABASE=product_db
--   DB_DATABASE=**\*\*\*\*** (Put your password here, leave blank if your mysql root uses no password)
+-   DB_PASSWORD=**\*\*\*\*** (Put your password here, leave blank if your mysql root uses no password)
 
 Please modify these values in the `.env.testing` file.
 
 -   DB_DATABASE=product_db_testing
--   DB_DATABASE=**\*\*\*\*** (Put your password here, leave blank if your mysql root uses no password)
+-   DB_PASSWORD=**\*\*\*\*** (Put your password here, leave blank if your mysql root uses no password)
 
 [hosted-url-admin]: https://pay4me.laravel.cloud/admin
 [assessment-pdf]: https://drive.google.com/file/d/1QFlo-qChZIKDgiaAQ26wGFVHOBBcj7G4/view?usp=sharing

@@ -79,7 +79,7 @@ class Handler extends ExceptionHandler
     private function handleResponse($message = 'There was an error', $code = Response::HTTP_INTERNAL_SERVER_ERROR)
     {
         return new JsonResponse([
-            'message' => $message,
+            'message' => $message ? $message : "There was an error, check status code",
         ], $code);
     }
 }

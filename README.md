@@ -2,7 +2,7 @@
 
 Submission for [Pay4me assessment][assessment-pdf], includes CRUD application via FilamentPHP, Testing with PestPHP and doc generation with Laravel Scribe
 <br><br>
-The app has been hosted [here][hosted-url] <br>
+The app has been hosted https://pay4me.laravel.cloud <br>
 You can visit the admin panel [here][hosted-url-admin]
 
 ### LOGIN DETAILS
@@ -63,7 +63,6 @@ Please modify these values in the `.env.testing` file.
 -   DB_DATABASE=product_db_testing
 -   DB_DATABASE=**\*\*\*\*** (Put your password here, leave blank if your mysql root uses no password)
 
-[hosted-url]: https://product-management-app-main-irm4rf.laravel.cloud
-[hosted-url-admin]: https://product-management-app-main-irm4rf.laravel.cloud/admin
+[hosted-url-admin]: https://pay4me.laravel.cloud/admin
 [assessment-pdf]: https://drive.google.com/file/d/1QFlo-qChZIKDgiaAQ26wGFVHOBBcj7G4/view?usp=sharing
 [documentation-link]: https://product-management-app-main-irm4rf.laravel.cloud/docs

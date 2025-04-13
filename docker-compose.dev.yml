@@ -1,0 +1,71 @@
+services:
+  api:
+    build: 
+      args:
+        user: flenjor
+        uid: 1000
+      context: ./
+      dockerfile: Dockerfile.dev
+    depends_on:
+      - mysql
+    environment:
+      - WAIT_HOSTS=mysql:3306
+      - WAIT_HOSTS_TIMEOUT=7200
+      - WAIT_SLEEP_INTERVAL=30
+      - WAIT_HOST_CONNECT_TIMEOUT=30
+      - TZ=Africa/Lagos
+    links:
+      - redis
+      - mysql
+    volumes:
+      - ./:/var/www
+      - ./docker/php/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+      - ./docker/supervisord/supervisord.conf:/etc/supervisor/supervisord.conf
+      - ./docker/supervisord/flenjor_worker.dev.conf:/etc/supervisor/conf.d/flenjor_worker.conf
+    command: ["supervisord", "-c", "/etc/supervisor/supervisord.conf"]
+
+  cron:
+    build:
+      context: ./
+      dockerfile: Dockerfile.cron
+    volumes:
+      - ./:/var/www
+      - ./cron/logs:/var/log/cron
+    links:
+      - redis
+      - mysql
+    environment:
+      - WAIT_HOSTS=mysql:3306
+      - WAIT_HOSTS_TIMEOUT=7200
+      - WAIT_SLEEP_INTERVAL=30
+      - WAIT_HOST_CONNECT_TIMEOUT=30
+      - TZ=Africa/Lagos
+
+  nginx:
+    image: nginx:1.17-alpine
+    restart: unless-stopped
+    links:
+      - api
+    ports:
+      - 8030:80
+    volumes:
+      - ./:/var/www
+      - ./docker/nginx/logs:/var/log/nginx
+      - ./docker/nginx:/etc/nginx/conf.d
+
+  mysql:
+    image: mysql
+    volumes:
+      - ./mysql:/var/lib/mysql
+    restart: always
+    ports:
+      - '9098:3306'
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: flenjor
+
+  redis:
+    image: redis:alpine
+
+  redis-local:
+    image: redis:alpine

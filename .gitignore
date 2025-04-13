@@ -21,3 +21,5 @@ yarn-error.log
 phpunit.xml.bak
 # PHPUnit cache
 .phpunit.cache
+*.log
+mysql

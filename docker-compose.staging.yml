@@ -1,0 +1,28 @@
+version: "3.3"
+services:
+  api:
+    image: docker-registry.deinira.com/api-staging:latest
+    ports:
+      - 8040:80
+    environment:
+      - WAIT_HOSTS_TIMEOUT=7200
+      - WAIT_SLEEP_INTERVAL=30
+      - WAIT_HOST_CONNECT_TIMEOUT=30
+      - TZ=Africa/Lagos
+    links:
+      - redis
+      - redis-local
+    depends_on:
+      - redis-local
+      - redis
+    volumes:
+      - ./assets:/var/www/storage/app/assets
+    restart: unless-stopped
+
+  redis:
+    image: redis:3.0
+    restart: unless-stopped
+
+  redis-local:
+    image: redis:3.0
+    restart: unless-stopped
